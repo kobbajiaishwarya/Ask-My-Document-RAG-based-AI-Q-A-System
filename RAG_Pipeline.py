@@ -24,13 +24,13 @@ if not api_key:  # If no API key found, stop and tell the user.
 if len(sys.argv) < 2: #sys.argv[0] [1]
     # len() counts items in a list. If there's only 1 item (the script name itself),
     # the user forgot to provide the filename argument.
-    print("Usage: python ask_my_doc.py <path_to_text_file>")
-    print("Example: python ask_my_doc.py ai_terminology_guide.txt")
+    print("Usage: python RAG_Pipeline.py <path_to_text_file>")
+    print("Example: python RAG_Pipeline.py Ai_Guide.txt")
     sys.exit(1)  # Exit because we can't continue without a file.
 
 doc_path = sys.argv[1]  # sys.argv[1] is the second item — the filename the user typed.
-                         # Example: if user typed "python ask_my_doc.py policy.txt"
-                         # then sys.argv = ["ask_my_doc.py", "policy.txt"]
+                         # Example: if user typed "python RAG_Pipeline.py policy.txt"
+                         # then sys.argv = ["RAG_Pipeline.py", "policy.txt"]
                          # and sys.argv[1] = "policy.txt"
 
 if not os.path.exists(doc_path):  # Check if the file actually exists on disk.
@@ -210,7 +210,7 @@ IMPORTANT RULES:
 # The user types 'quit' to exit.
 
 print("="*60)
-print("  Ask My Doc — Document Question Answering System")
+print("  RAG_Pipeline — Document Question Answering System")
 print("="*60)
 print(f"  Document: {doc_path}")
 print(f"  Chunks: {len(chunks)} | Embedding model: all-MiniLM-L6-v2")
@@ -231,7 +231,7 @@ while True:
     if question.lower() == "quit":
         # .lower() converts the string to lowercase. This means "QUIT", "Quit", "quit" all work.
         # We check if the lowercased question equals the string "quit".
-        print("Goodbye! Thanks for using Ask My Doc.")
+        print("Goodbye! Thanks for using RAG_Pipeline.")
         break  # Exit the while True loop. The program will end.
 
     if not question:  # If the user just pressed Enter without typing anything...
