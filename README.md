@@ -71,7 +71,7 @@ G --> H[Similarity Search]
 
 E --> H
 H --> I[Relevant Context]
-I --> J[LLM (OpenAI/Groq)]
+I --> J[LLM - OpenAI or Groq]
 J --> K[Final Answer]
 ```
 
