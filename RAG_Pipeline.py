@@ -25,7 +25,7 @@ if len(sys.argv) < 2: #sys.argv[0] [1]
     # len() counts items in a list. If there's only 1 item (the script name itself),
     # the user forgot to provide the filename argument.
     print("Usage: python RAG_Pipeline.py <path_to_text_file>")
-    print("Example: python RAG_Pipeline.py Ai_Guide.txt")
+    print("Example: python RAG_Pipeline.py Ai_Guide")
     sys.exit(1)  # Exit because we can't continue without a file.
 
 doc_path = sys.argv[1]  # sys.argv[1] is the second item — the filename the user typed.
